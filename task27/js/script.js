@@ -103,7 +103,7 @@ function addListen(){
 			//alert(cls+"   "+railIndex);
 			setTimeout(function(){
 				var newConsole=new Console();
-				if(Math.random()>0.3){
+				if(Math.random()>0.1){
 					if(targetCon=="开始飞行"){
 						targetElem.disabled=true;
 						targetElem.nextElementSibling.disabled=false;
