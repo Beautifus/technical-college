@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>35</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+			text-align:center;
+		}
+		#box{
+			margin:0 auto;
+			width:664px;
+			height:664px;
+			border:1px solid black;
+		}
+		#box>div:first-child{
+			width:20px;
+			height:20px;
+			display:inline-block;
+			float:left;
+		}
+		.count{
+			list-style:none;
+		}
+		.row>li{
+			display:inline-block;
+			text-align:center;
+			width:60px;
+			height:20px;
+		}
+		.col>li{
+			width:20px;
+			line-height:63px;
+			height:63px;
+		}
+		#container{
+			float:right;
+			width:640px;
+			height:640px;
+			border:1px solid black;
+			display:flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		/*.ss{
+			display:inline-block;
+			width:63px;
+			height:63px;
+			margin:0px;
+			border:1px solid silver;
+			border-left:none;
+		}*/
+		.ss{
+			display:inline-block;
+			flex:1;
+			border:1px solid silver;
+		}
+		.mydiv{
+			width:100%;
+			height:63px;
+			display:flex;
+			flex:1;
+			justify-content: space-between;
+		}
+		.oBlack-0{
+			
+			border-top:20px solid blue;
+			background-color:red;
+		}
+		.oBlack-1{
+			border-right:20px solid blue;
+			background-color:red;
+		}
+		.oBlack-2{
+			border-bottom:20px solid blue;
+			background-color:red;
+		}
+		.oBlack-3{
+			border-left:5px solid blue;
+			background-color:red;
+		}
+		.rotate-90{
+			transform:rotate(90deg);
+            -ms-transform:rotate(90deg);
+            -webkit-transform:rotate(90deg);
+		}
+		#controlView{
+			float:left;
+			width:250px;
+			margin-top:100px;
+			margin-left:20px;
+			text-align: center;
+			position:relative;
+		}
+		#myul{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:20px;
+			list-style:none;
+			overflow: hidden;
+			color:#fff;
+			float:left;
+			line-height: 14px;
+			font-size:14px;
+			color:black;
+			background:silver;
+		}
+		#control{
+			overflow-x:hidden;
+			word-wrap:break-word;
+			word-break:break-all;
+			text-align: left;
+			position:absolute;
+			top:0px;
+			left:24px;
+			width:200px;
+			height:300px;
+			display:black;
+			float:left;
+			outline:none;
+			resize:none;
+			font-size:14px;
+			line-height:14px;
+			overflow-y: :auto;
+		}
+		#butt{
+			position:absolute;
+			top:320px;
+			left:20%;
+			width:50px;
+		}
+		#clear{
+			position:absolute;
+			top:320px;
+			left:40%;
+			width:50px;
+		}
+		#flush{
+			position:absolute;
+			top:320px;
+			left:60%;
+			width:50px;
+		}
+		#buttons{
+			position:absolute;
+			float:left;
+			top:370px;
+			left:20px;
+		}
+	</style>
+</head>
+<body>
+<div id="root">
+<div id="controlView"></div>
+	<div id="box">
+	<div></div>
+	<ol class="count row">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ol>			
+	<div id="container"></div>
+	<ol class="count col">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ol>	
+	</div>
+	
+</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="move.js"></script>
+</html>
