@@ -1,0 +1,46 @@
+*{
+
+}
+.content{
+	width:850px;
+	margin:0 auto;
+	border:1px solid silver;
+	position:relative;
+}
+img{
+	display:inline-block;
+	position:absolute;
+	margin-top:10px;
+}
+.pic1{
+	width:200px;
+	height:200px;
+}
+.pic2{
+	width:200px;
+	height:250px;
+}
+.pic3{
+	width:200px;
+	height:100px;
+}
+.pic4{
+	width:200px;
+	height:300px;
+}
+.pic5{
+	width:200px;
+	height:300px;
+}
+.pic6{
+	width:200px;
+	height:400px;
+}
+.pic7{
+	width:200px;
+	height:210px;
+}
+.pic8{
+	width:200px;
+	height:310px;
+}
