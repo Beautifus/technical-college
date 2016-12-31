@@ -1,0 +1,22 @@
+body {
+    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+    font-size: 14px;
+    overflow-y: scroll;
+}
+*{
+	padding:0;
+	margin:0;
+}
+.rowDom{
+	width:100%;
+	margin-bottom:8px;
+}
+.photo:first-child{
+	padding-left:0px;
+}
+.photo{
+	height:100%;
+	box-sizing:border-box;
+	display:inline-block;
+	padding-left:8px;
+}
