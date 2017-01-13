@@ -1,0 +1,75 @@
+<html>
+<head>
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+height:100%;
+}
+.mydiv{
+	height:200px;
+	width:400px;
+	margin:0 auto;
+	background:#ccc;
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+	overflow:hidden;
+}
+.div1,.div2{
+	background:#fc0;
+	width:100px;
+	height:100px
+}
+.div1{
+	position:absolute;
+	top:-50px;
+	left:-50px;
+	border-radius:50px;
+}
+.div2{
+	position:absolute;
+	bottom:-50px;
+	right:-50px;
+	border-radius:50px;
+}
+#mycanvas{
+background-color:#ccc;
+width:400px;
+height:200px;
+}
+</style>
+
+</head>
+<body>
+<div class="mydiv">
+<canvas id="mycanvas"></canvas>
+<!--
+	<div class="div1">
+	</div>
+	 <div class="div2">
+	</div>
+	<div class="div3">
+	</div>
+	<div class="div4">
+	</div>
+-->
+</div>
+
+</body>
+<script type="text/javascript">
+	var my=document.getElementById("mycanvas");
+	var ctx=my.getContext("2d");
+	ctx.fillStyle="#fc0";
+	ctx.beginPath();
+	ctx.arc(0,0,50,0,Math.PI*2,true);
+	ctx.closePath();
+	ctx.fill();
+	ctx.moveTo(350,200);
+	ctx.fillStyle="#fc0";
+	ctx.beginPath();
+	ctx.arc(300,150,50,0,Math.PI*2,true);
+	ctx.closePath();
+	ctx.fill();
+</script>
+</html>
