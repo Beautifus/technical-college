@@ -1,0 +1,119 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background:silver;
+}
+header{
+	width:100%;
+	height:40px;
+	background-color:orange;
+	color:#ffffff;
+	font-size:21px;
+}
+header span{
+	padding-left:40px;
+	background-color:orange;
+}
+a{
+	text-decoration: none;
+	color:black;
+	font-size:21px;
+
+}
+#content{
+	width:80%;
+	height:100%;
+	margin:0px auto;
+	margin-top:40px;
+	background:#ffffff;
+}
+
+#header,ul{
+	list-style: none;
+	background:#ffffff;
+}
+ul li{
+	display:inline-block;
+	padding-left: 100px;
+}
+#header li{
+	display:inline-block;
+	padding-left:100px;
+}
+#header li:first-child{
+	padding-left:100px;
+}
+#title{
+	width:100%;
+	text-align:center;
+	border:0px;
+	height:40px;
+	font-size:14px;
+	margin-top:5px;
+	border-bottom: 1px solid silver; 
+}
+#titlecon{
+	width:100%;
+	height:50px;
+}
+#mycontent{
+	width:100%;
+	height:100%;
+}
+#title:focus{
+	background-color: orange;
+}
+#addcon{
+	height:60px;
+	vertical-align: middle;
+	border-bottom:1px solid silver;
+}
+
+#addcon p{
+	width:100%;
+	height:40px;
+	margin-top:10px;
+	background-color:silver;
+	text-align:center;
+	vertical-align: 50%;
+	line-height: 40px;
+}
+.choice{
+	width:100%;
+	height:60px;
+	line-height: 60px;
+	text-align:center;
+}
+.spanchoice{
+	width:100px;
+	height:40px;
+	background-color: silver;
+	margin-left:40px;
+}
+li input{
+ border:0px;
+ }
+ .ques li{
+ 	display:block;
+ 	margin-left:20px;
+ }
+ .ques li:first-child{
+ 	margin-left:0px;
+ }
+ #sava{
+ 	width:100%;
+ 	height:60px;
+ 	text-align: center;
+ }
+ .edit,.del,.view{
+ 	width:100px;
+ 	height:20px;
+ 	background:silver;
+ 	margin-left:30px;
+ }
+ li div{
+ 	display:inline-block;
+ 	margin-left:40px;
+ }
