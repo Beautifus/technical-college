@@ -110,10 +110,26 @@ li input{
  .edit,.del,.view{
  	width:100px;
  	height:20px;
- 	background:silver;
+ 	backgrobuttonund:silver;
  	margin-left:30px;
  }
  li div{
  	display:inline-block;
  	margin-left:40px;
  }
+button ,a,.edit,.del,.view,.add,.choice,.spanchoice{
+	cursor:pointer;
+}
+.edit,.del,.view,.add{
+	width:100px;
+	height:40px;
+}
+.edit:hover{
+	background:orange;
+}
+.del:hover{
+	background-color:orange;
+}
+.view:hover{
+	background-color:orange;
+}

@@ -20,7 +20,7 @@ rl.prototype={
 				stat="已过期";
 				color="#ccc";
 			}
-			li.innerHTML="<div><label for=\"listq"+i+"\"><input name='listq' id=\"listq"+i+"\" type=\"checkbox\">"+this.data[i].title+"</label></div><div>"+this.data[i].times+"</div><div style='color:"+color+";'>"+stat+"</div><div><span class=\"edit\">编辑</span><span class=\"del\">删除</span><span class=\"view\">查看问卷</span></div>";
+			li.innerHTML="<div><label for=\"listq"+i+"\"><input name='listq' id=\"listq"+i+"\" type=\"checkbox\">"+this.data[i].title+"</label></div><div>"+this.data[i].times+"</div><div style='color:"+color+";'>"+stat+"</div><div><button class=\"edit\">编辑</button><button class=\"del\">删除</button><button class=\"view\">查看问卷</button></div>";
 			mysurvey.appendChild(li);
 		}
 	}

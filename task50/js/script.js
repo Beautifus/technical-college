@@ -1,4 +1,5 @@
 window.onload=function(){
+	//alert("a");
 	var addbut=document.getElementById("addbutton");
 var mytitle=document.getElementById("title");
 var mycon=document.getElementById("mycon");
@@ -69,6 +70,7 @@ function radioclick(){
 	newul.className="ques";
 	newul.innerHTML=s;
 	mycon.appendChild(newul);
+	input_click();
 }
 function multiclick(){
 	var s=str.replace(/%s/g,k).replace(/%q/g,"checkbox");
@@ -77,6 +79,7 @@ function multiclick(){
 	newul.className="ques";
 	newul.innerHTML=s;
 	mycon.appendChild(newul);
+	input_click();
 }
 function textclick(){
 	var newul=document.createElement("ul");
@@ -91,11 +94,34 @@ function textclick(){
 	newli.appendChild(newtext);
 	newul.appendChild(newli);
 	mycon.appendChild(newul);
-
+	input_click();
 }
 var ss='<li>%s</li><li>%time</li><li>%status</li><li><span class="edit">编辑</span><span class="del">删除</span><span class="view">查看问卷</span></li>'
 var s='<li>';
-
+function input_click(){
+	var inputs=document.getElementsByTagName("input");
+//alert(inputs.length);
+var value="";
+for(var i=0;i<inputs.length;i++){
+	inputs[i].onfocus=function(event){
+		//alert("gg");
+		var event=event||window.event;
+		var targetElem=event.target||event.srcElement;
+		value=targetElem.value;
+		targetElem.value="";
+	}
+	inputs[i].onblur=function(event){
+			//alert("fa");
+			var event=event||window.event;
+			var targetElem=event.target||event.srcElement;
+			var val=targetElem.value;
+			if(val==""){
+				targetElem.value=value;
+			}
+		}
+}
+}
+input_click();
 var quess=document.getElementsByTagName("ul");
 sava.onclick=function(event){
 	//storage.do="save";
