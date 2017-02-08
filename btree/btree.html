@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>btree</title>
+	<link rel="stylesheet" type="text/css" href="./css/mycss.css">
+	<script type="text/javascript">
+	var s="this";
+		console.log(s);
+	</script>
+</head>
+<body>
+	<header id="head">
+		
+		<ul class="header">
+			<li>
+				<a href="baidu.com">查询</a>
+			</li>
+			<li>
+				<a href="#">File</a>
+				<ul class="child">
+					<li>
+					<a href="#">New Tree</a>
+					</li>
+					<li>
+						<a href="#">Import Tree</a>
+					</li>
+					<li>
+						<a href="#">Export Tree</a>
+					</li>
+					<hr>
+					<li>
+						<a href="#">Add Custom Node</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Edit</a>
+				<ul class="child">
+					<li>
+					<a href="#">New Tree</a>
+					</li>
+					<li>
+						<a href="#">Import Tree</a>
+					</li>
+					<li>
+						<a href="#">Export Tree</a>
+					</li>
+					<hr>
+					<li>
+						<a href="#">Add Custom Node</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">View</a>
+				<ul class="child">
+					<li>
+					<a href="#">New Tree</a>
+					</li>
+					<li>
+						<a href="#">Import Tree</a>
+					</li>
+					<li>
+						<a href="#">Export Tree</a>
+					</li>
+					<hr>
+					<li>
+						<a href="#">Add Custom Node</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Selection</a>
+				<ul class="child">
+					<li>
+					<a href="#">New Tree</a>
+					</li>
+					<li>
+						<a href="#">Import Tree</a>
+					</li>
+					<li>
+						<a href="#">Export Tree</a>
+					</li>
+					<hr>
+					<li>
+						<a href="#">Add Custom Node</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</header>
+	<div>
+		<div class="left" id="left">
+		</div>
+		<div class="content" id="content">
+			<canvas id="mycanvas" width="800" height="1000"></canvas>
+		</div>
+		<div class="right">
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var mycanvas=document.getElementById("mycanvas");
+	var cont=mycanvas.getContext('2d');
+	var draws=[];
+</script>
+<script type="text/javascript" src="./js/view.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+
+</html>
