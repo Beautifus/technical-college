@@ -1,4 +1,5 @@
-var mysurvey=document.getElementById("survey");
+window.onload=function(){
+	var mysurvey=document.getElementById("survey");
 function rl(data){
 	this.data=data;
 }
@@ -70,4 +71,5 @@ for(var i=0;i<chose_view.length;i++){
 		location.href="view.html";
 	}
 }
+};
 
