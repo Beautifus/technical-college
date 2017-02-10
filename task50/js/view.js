@@ -20,9 +20,14 @@ var strrr='<li><span>Q%s <input type="text" value="%t"></span></li><li><input ty
 				var newul=document.createElement("ul");
 
 				newul.className="ques";
-				//alert(questions[i].typle);
-				var s=strrr.replace(/%s/,i+1).replace(/%t/,questions[i].text).replace(/%typle/g,questions[i].typle).replace(/%q1/,questions[i].options[0]).replace(/%q2/,questions[i].options[1]).replace(/%q3/,questions[i].options[2]).replace(/%q4/,questions[i].options[3]);
-				newul.innerHTML=s;
+				if(questions[i].typle=="text"){
+					var text='<li><span>Q'+(i+1)+'<input type="text" value="'+questions[i].text+'"></span></li><li><textarea rows="8" cols="40">'+questions[i].values+'</textarea></li><li><button class="up">上移</button><button class="down">下移</button><button class="reuse">复用</button><button class="quesdel">删除</button></li>';
+					newul.innerHTML=text;
+
+				}else{
+					var s=strrr.replace(/%s/,i+1).replace(/%t/,questions[i].text).replace(/%typle/g,questions[i].typle).replace(/%q1/,questions[i].options[0]).replace(/%q2/,questions[i].options[1]).replace(/%q3/,questions[i].options[2]).replace(/%q4/,questions[i].options[3]);
+					newul.innerHTML=s;
+				}
 				mycon.appendChild(newul);
 			}
 			k=questions.length+1;
@@ -31,3 +36,4 @@ var strrr='<li><span>Q%s <input type="text" value="%t"></span></li><li><input ty
 		
 	}
 };
+

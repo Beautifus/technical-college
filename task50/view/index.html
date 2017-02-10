@@ -14,32 +14,36 @@
 		<span><a href="index.html">我的问卷</a></span>
 	</header>
 	<div id="content">
-		<ul id="header">
+		<div class="header1">
+			<div>标题</div>
+			<div>时间</div>
+			<div>状态</div>
+			<div>操作</div>
+			<div><span class="new"><a href="new.html" id="new"> + 新建</a></span></div>
+		</div>
+		<!--<ul id="header">
 			<li>标题</li>
 			<li>时间</li>
 			<li>状态</li>
 			<li>操作</li>
 			<li><span style="background:orange"><a href="new.html" id="new"> + 新建</a></span></li>
-		</ul>
-		<div >
-			<ul id="survey">
-			</ul>
+		</ul>-->
+		<div id="survey">
+			
 		</div>
-		
-		<ul>
-			<li>
-				<label for="selectall">
-					<input type="radio" name="selectall">全选
-				</label>
-			</li>
-			<li>
-				<button id="delete">删除</button>
-			</li>
-		</ul>
+		<div class="selallanddel">
+			<label for="selectall">
+				<input type="radio"  id="selectall" name="selectall">
+				<span>全选</span>
+			</label>
+			<label for="delete">
+				<button class="delall" id="delall">删除</button>
+			</label>
+		</div>
 	</div>
 </body>
-<!--
-<script type="text/javascript" src="../js/data.js"></script>
+
+<!--<script type="text/javascript" src="../js/data.js"></script>
 <script type="text/javascript" src="../js/myscript.js"></script>-->
 
 <script type="text/javascript" src="https://rawgit.com/Beautifus/technical-college/master/task50/js/data.js"></script>

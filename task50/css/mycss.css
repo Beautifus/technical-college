@@ -1,6 +1,8 @@
-*{
+@media (min-width:900px){
+	*{
 	margin:0;
 	padding:0;
+	font-size:20px;
 }
 body{
 	background:silver;
@@ -29,6 +31,41 @@ a{
 	margin-top:40px;
 	background:#ffffff;
 }
+.header1{
+	margin-top:20px;
+	margin-bottom:20px;
+	width:100%;
+	height:40px;
+	font-size:20px;
+	
+}
+.header1 div{
+	display:inline-block;
+	width:13%;
+	padding-left:40px;
+}
+.header1 div:last-child{
+	padding-left:0px;
+	width:100px;
+}
+.header{
+	margin-top:20px;
+	margin-bottom:50px;
+	width:100%;
+	height:40px;
+	font-size:20px;
+}
+.header div{
+	display:inline-block;
+	width:13%;
+	padding-left:40px;
+}
+.header div:last-child{
+	display:inline-block;
+	width:35%;
+	padding-left:0px;
+}
+/*
 
 #header,ul{
 	list-style: none;
@@ -44,7 +81,7 @@ ul li{
 }
 #header li:first-child{
 	padding-left:100px;
-}
+}*/
 #title{
 	width:100%;
 	text-align:center;
@@ -69,6 +106,7 @@ ul li{
 	height:60px;
 	vertical-align: middle;
 	border-bottom:1px solid silver;
+
 }
 
 #addcon p{
@@ -107,11 +145,11 @@ li input{
  	height:60px;
  	text-align: center;
  }
- .edit,.del,.view{
+ .edit,.del,.view,#save,#publish{
  	width:100px;
- 	height:20px;
- 	backgrobuttonund:silver;
- 	margin-left:30px;
+ 	height:40px;
+ 	background:silver;
+ 	margin-left:10px;
  }
  li div{
  	display:inline-block;
@@ -120,11 +158,17 @@ li input{
 button ,a,.edit,.del,.view,.add,.choice,.spanchoice{
 	cursor:pointer;
 }
-.edit,.del,.view,.add{
+.edit,.del,.view,.add,#save,#publish{
 	width:100px;
 	height:40px;
+	border-radius:8px;
+	background-color:#ffffff;
+	border:1px solid black;
 }
-.edit:hover{
+.add{
+	border:0px;
+}
+.edit:hover,#save:hover,#publish:hover{
 	background:orange;
 }
 .del:hover{
@@ -132,4 +176,28 @@ button ,a,.edit,.del,.view,.add,.choice,.spanchoice{
 }
 .view:hover{
 	background-color:orange;
+}
+.new{
+	display:inline-block;
+	text-align: center;
+	background-color:orange;
+	height:30px;
+	width:100px;
+	border-radius:8px;
+	color:#ffffff;
+}
+.selallanddel{
+	display:flex;
+	justify-content: space-around;
+}
+.delall{
+	width:100px;
+	height:40px;
+	border:1px solid black;
+	background:#FFFFFF;
+	border-radius:8px;
+}
+.ques li:last-child{
+	/*float:right;	*/
+}
 }
