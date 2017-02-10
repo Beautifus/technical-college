@@ -1,4 +1,5 @@
 window.onload=function(){
+	//storage.module=view;
 var mytitle=document.getElementById("title");
 var mycon=document.getElementById("mycon");
 //var mytext=document.getElementById("text");
@@ -16,9 +17,7 @@ var strrr='<li><span>Q%s <input type="text" value="%t"></span></li><li><input ty
 			//alert(questions.length);
 		if(questions.length){
 			for(var i=0;i<questions.length;i++){
-				
 				var newul=document.createElement("ul");
-
 				newul.className="ques";
 				if(questions[i].typle=="text"){
 					var text='<li><span>Q'+(i+1)+'<input type="text" value="'+questions[i].text+'"></span></li><li><textarea rows="8" cols="40">'+questions[i].values+'</textarea></li><li><button class="up">上移</button><button class="down">下移</button><button class="reuse">复用</button><button class="quesdel">删除</button></li>';
@@ -33,7 +32,11 @@ var strrr='<li><span>Q%s <input type="text" value="%t"></span></li><li><input ty
 			k=questions.length+1;
 		}
 		storage.removeItem("ques");
-		
+		var inputs=document.getElementsByTagName("input");
+for(var i=0;i<inputs.length;i++){
+	inputs[i].disabled="true";
+	inputs[i].style.background="#FFFFFF";
+}
 	}
 };
 

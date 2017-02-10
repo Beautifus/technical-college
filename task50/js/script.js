@@ -1,5 +1,5 @@
 window.onload=function(){
-	var addbut=document.getElementById("addbutton");
+		var addbut=document.getElementById("addbutton");
 	var mytitle=document.getElementById("title");
 	var mycon=document.getElementById("mycon");
 	var mychoice=document.getElementById("choice");
@@ -86,12 +86,16 @@ function radioclick(){
 	var k=check_k(mycon.children[mycon.children.length-1]);
 	//alert(k);
 	var s=str.replace(/%s/g,k).replace(/%q/g,"radio");
+	//var newdiv=document.createElement("div");
+	//newdiv.className="mydiv";
 	var newul=document.createElement("ul");
 	newul.className="ques";
 	newul.innerHTML=s;
+	//newdiv.appendChild(newul);
 	mycon.appendChild(newul);
 	input_click();
 	up_click();
+	//check_hover();
 }
 function multiclick(){
 	var k=check_k(mycon.children[mycon.children.length-1]);
@@ -102,6 +106,28 @@ function multiclick(){
 	mycon.appendChild(newul);
 	input_click();
 	up_click();
+	//check_hover();
+}
+function check_hover(){
+	var mydiv=document.getElementsByClassName("mydiv");
+for(var i=0;i<mydiv.length;i++){
+	mydiv[i].onmouseover=function(event){
+		var event=event||window.event;
+		var target=event.target||event.srcElement;
+		var inputs=target.querySelectorAll("input");
+		for(var i=0;i<inputs.length;i++){
+			inputs[i].style.backgroundColor="pink";
+		}
+	}
+	mydiv[i].onmouseout=function(event){
+		var event=event||window.event;
+		var target=event.target||event.srcElement;
+		var inputs=target.querySelectorAll("input");
+		for(var i=0;i<inputs.length;i++){
+			inputs[i].style.background="white";
+		}
+	}
+}
 }
 
 function textclick(){
@@ -125,6 +151,7 @@ function textclick(){
 	mycon.appendChild(newul);
 	input_click();
 	up_click();
+	//check_hover();
 }
 var ss='<li>%s</li><li>%time</li><li>%status</li><li><span class="edit">编辑</span><span class="del">删除</span><span class="view">查看问卷</span></li>'
 var s='<li>';
@@ -306,5 +333,5 @@ function up_click(){
 		}
 	}
 }
-
+	
 };
