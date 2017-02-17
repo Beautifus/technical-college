@@ -58,6 +58,7 @@ ul li a{
 <script type="text/javascript">
 
 	window.onload=function(){
+
 		var searchResult=[];
 		function $(obj){
 		return document.getElementById(obj);
@@ -67,11 +68,15 @@ ul li a{
 		var delBtn=$("delBtn");
 		var nodeToSearch=$("nodeToSearch");
 		var searchBtn=$("searchBtn");
-		addBtn.addEventListener("click",function(){
-			addNode(nodeName.value);
+		ajax('folder.json',function(data){
+			var containerDiv=$("container");
+			var data=eval(data);
+			genFolders(data,containerDiv);
 			selected();
-
-			alert($("container").innerHTML)
+		addBtn.addEventListener("click",function(){
+			addNode(nodeName.value);	
+			selected();
+			//alert($("container").innerHTML)
 		});
 		delBtn.addEventListener("click",function(){
 			selected();
@@ -81,13 +86,38 @@ ul li a{
 
 		});*/
 		searchBtn.addEventListener("click",function(){
+			clearSelect();
 			searchTree($("container").firstElementChild,nodeToSearch.value);
 			//alert($("container"));
-			alert(searchResult[0].innerText+" hah");
+			//alert(searchResult[0].innerText+" hah");
 			for(var i=0;i<searchResult.length;i++){
 				searchResult[i].setAttribute("class","searched");
 			}
 		});
+		selected();
+		},function(){
+			alert("Json文件加载失败");
+		})
+		
+		function genFolders(data,container){
+			for(var i=0;i<data.length;i++){
+				var newul=document.createElement("ul");
+				var newli=document.createElement("li");
+				var newi=document.createElement("i");
+				var newa=document.createElement("a");
+				newi.className="unfold";
+				newa.innerHTML=data[i].text;
+				newul.appendChild(newli);
+				newli.appendChild(newi);
+				newli.appendChild(newa);
+				container.appendChild(newul);
+				if(data[i].hasOwnProperty("children")){
+					genFolders(data[i].children,newul);
+				}
+
+			}
+			
+		}
 		var selectNode;
 		function selected(){
 			var aText=document.getElementsByTagName("a");
@@ -135,10 +165,12 @@ ul li a{
 		function clearSelect(){
 			var aTe=document.getElementsByTagName("a");
 			for(var i=0;i<aTe.length;i++){
-				var clsName=aTe[i].className.replace(/selected/,"");
-				 aTe[i].className=clsName;
+				//alert("haa");
+			//	var clsName=aTe[i].className.replace(/selected/," ");
+			aTe[i].setAttribute('class','');
+				// aTe[i].className=clsName;
 			}
-			selectNode="";
+			searchResult=[];
 		}
 		
 		var flag=true,con;
@@ -163,5 +195,6 @@ ul li a{
 	}
 	
 </script>
+<script type="text/javascript" src="js/ajax.js"></script>
 </body>
 </html>
