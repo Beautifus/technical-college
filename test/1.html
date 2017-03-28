@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>手势密码</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			font-size:30px;
+			color:#fff
+		}
+		body{
+			background:url("img/bak.jpg");
+
+			padding-top:20px;
+		}
+		#mycanvas{
+			background-color:rgba(255,255,255,0);
+			opacity:0.5;
+		}
+		#mydiv{
+			width:90%;
+			height:80%;
+			margin:0 auto;
+		}
+		#content{
+			text-align:center;
+		}
+		#content div{
+			display:flex;
+			justify-content:space-around;
+			align-items:space-around;
+		}
+		label{
+			flex:0.8
+		}
+		#titlep{
+			text-align:center;
+			height:40px;
+			width:100%;
+			line-height:40px;
+		}
+		label input{
+			width:40px;
+			height:40px;
+			border-radius:40px;
+		}
+	</style>
+</head>
+<body>
+<p id="titlep">手势密码</p>
+<div id="mydiv">
+	<canvas id="mycanvas" ></canvas>
+</div>
+	<div id="content">
+		<p></p>
+		<div>
+			<label for="set">
+				<input type="radio" checked="checked" name="pwd" id="set">设置密码
+			</label>
+			<label for="validate">
+				<input type="radio" name="pwd" id="validate">验证密码
+			</label>
+		<div>
+	</div>
+</body>
+<script type="text/javascript" src="js/password.js"></script>
+<script type="text/javascript" src="js/draw.js"></script>
+<script type="text/javascript">
+
+	var mycanvas=document.getElementById("mycanvas");
+	var cachecanvas=document.createElement("canvas");
+	var ctx=mycanvas.getContext('2d');
+	var circles=[];
+	var mybox=mycanvas.getBoundingClientRect();
+	var radios=document.getElementById("content");
+	var wid=mybox.left;
+	var hei=mybox.top;
+	var lines=[];
+	var records=[];
+
+	window.onload=function(){
+		window.onresize=function(){
+			resizeCanvas();
+			render();
+		}
+	}	
+	function resizeCanvas(){
+	circles=[];
+		mycanvas.width=window.innerWidth*0.9;
+		mycanvas.height=window.innerHeight*0.8;
+		mycanvas.style.width=window.innerWidth*0.9+"px";
+		mycanvas.style.height=window.innerHeight*0.8+"px";
+		ctx.fillStyle="rgba(255,255,255,0)";
+		ctx.fillRect(0,0,mycanvas.width,mycanvas.height);
+		for(var i=0;i<9;i++){
+			drawCircle(ctx,parseInt(mycanvas.width/6)+parseInt(i%3)*parseInt(mycanvas.width/3),parseInt(mycanvas.width/8)+parseInt(i/3)*parseInt(mycanvas.height/3));
+			circles.push({x:parseInt(mycanvas.width/6)+parseInt(i%3)*parseInt(mycanvas.width/3),y:parseInt(mycanvas.width/8)+parseInt(i/3)*parseInt(mycanvas.height/3)});
+		}
+	}
+	resizeCanvas();
+	
+	radios.onclick=function(event){
+		var event=event||window.event;
+		var target=event.target||event.srcElement;
+		radios.querySelector("p").innerHTML="";
+		canvasopera(target.id);
+	}
+	
+</script>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
